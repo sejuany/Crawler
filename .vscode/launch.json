@@ -1,0 +1,20 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+      {
+        "type": "node",
+        "request": "launch",
+        "name": "Launch index.js",
+        "program": "${workspaceFolder}/index.js",
+        "console": "integratedTerminal"
+      }
+    ],
+    "bin": "index.js",           // 실행 진입점
+    "pkg": {
+      "scripts": ["index.js"],   // 포함할 스크립트
+      "assets": [
+        // puppeteer 기본 Chromium 바이너리 전체를 포함하려면
+        "node_modules/puppeteer/.local-chromium/**/*"
+      ]
+    }
+  }
