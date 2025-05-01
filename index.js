@@ -9,7 +9,7 @@ const axios = require('axios')
 const readline = require('readline')
 
 async function downloadResource(resourceUrl, saveDir) {
-  if (resourceUrl.startsWith('data:')) return
+  if (resourceUrl.startsWith('data:')) return 
   try {
     const urlObj = new URL(resourceUrl)
     const savePath = path.join(saveDir, urlObj.pathname)
